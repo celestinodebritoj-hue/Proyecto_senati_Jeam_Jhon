@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Escáner</title>
+  <link rel="stylesheet" href="asset/style.css">
+</head>
+<!-- data-protegida="si": comun.js te manda al login si no hay sesión -->
+<body data-protegida="si">
+  <main>
+    <div class="barra">
+      <strong>CONTROL</strong>
+      <button class="btnMenu" aria-label="Menú">☰</button>
+
+      <div id="menu" class="oculto">
+        <a href="escaner-Cel.html">📷 Escáner</a>
+        <a href="asistencia-Cel.html">📋 Asistencia</a>
+        <button id="btnSalir">🚪 Cerrar sesión</button>
+      </div>
+    </div>
+
+    <div class="perfil">
+      <div class="foto">👤</div>
+      <p id="nombreUsuario"></p>
+    </div>
+
+    <!-- Aquí la librería dibuja el video de la cámara -->
+    <div id="lector"></div>
+    <p id="mensaje"></p>
+
+    <!-- Plan B por si la cámara falla durante la exposición -->
+    <div class="manual">
+      <input type="text" id="manual" placeholder="Escribir nombre del colaborador">
+      <button class="boton" id="btnManual">Registrar</button>
+    </div>
+  </main>
+
+  <!-- Librería que abre la cámara y lee códigos QR -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html5-qrcode/2.3.8/html5-qrcode.min.js"></script>
+  <script src="asset/js/comun.js"></script>
+  <script src="asset/js/escaner.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Asistencia</title>
+  <link rel="stylesheet" href="asset/style.css">
+</head>
+<body data-protegida="si">
+  <main>
+    <div class="barra">
+      <strong>ASISTENCIA</strong>
+      <div>
+        <button id="btnLupa" aria-label="Buscar">🔍</button>
+        <button class="btnMenu" aria-label="Menú">☰</button>
+      </div>
+
+      <div id="menu" class="oculto">
+        <a href="escaner-Cel.html">📷 Escáner</a>
+        <a href="asistencia-Cel.html">📋 Asistencia</a>
+        <button id="btnSalir">🚪 Cerrar sesión</button>
+      </div>
+    </div>
+
+    <div class="tarjeta">
+      <!-- Oculto hasta que se toque la lupa -->
+      <input type="search" id="buscador" class="oculto" placeholder="Buscar colaborador...">
+      <div class="contenedor-tabla">
+        <table>
+          <thead>
+            <tr><th>Colaborador</th><th>Entrada</th><th>Salida</th></tr>
+          </thead>
+          <tbody id="cuerpoTabla"></tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <script src="asset/js/comun.js"></script>
+  <script src="asset/js/asistencia.js"></script>
+</body>
+</html>
