@@ -4,7 +4,7 @@ const USUARIOS = {
 };
 
 // Si ya hay sesión abierta, salta directo al escáner
-if (sessionStorage.getItem("usuario")) location.href = "escaner.html";
+if (sessionStorage.getItem("usuario")) location.href = "escaner-Cel.html";
 
 $("formLogin").addEventListener("submit", (e) => {
   e.preventDefault();                                  // evita que la página se recargue
@@ -12,7 +12,7 @@ $("formLogin").addEventListener("submit", (e) => {
 
   if (usuario && usuario.clave === $("clave").value) {
     sessionStorage.setItem("usuario", usuario.nombre); // recuerda la sesión mientras la pestaña esté abierta
-    location.href = "escaner.html";
+    location.href = "escaner-Cel.html";
   } else {
     $("errorLogin").textContent = "Correo o contraseña incorrectos.";
   }
