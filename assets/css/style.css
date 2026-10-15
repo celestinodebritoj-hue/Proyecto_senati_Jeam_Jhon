@@ -84,3 +84,44 @@ table { width: 100%; border-collapse: collapse; background: #fff; font-size: 13p
 th { background: var(--azul-boton); color: #fff; padding: 8px; }
 td { border: 1px solid #999; padding: 8px; text-align: center; }
 .vacio { text-align: center; padding: 20px; color: #555; }
+
+
+/* TABLET: desde 768px de ancho */
+@media (min-width: 768px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  .panel {
+    flex-direction: row;
+    width: 100%;
+    max-width: 900px;
+    padding: 32px;
+    gap: 32px;
+  }
+
+  .columna-usuario,
+  .columna-escaner {
+    flex: 1;
+  }
+
+  .usuario {
+    flex: 1;
+  }
+}
+
+/* PC: desde 1024px de ancho */
+@media (min-width: 1024px) {
+  .panel {
+    max-width: 1100px;
+    padding: 40px;
+    gap: 40px;
+  }
+
+  .logo {
+    font-size: 28px;
+  }
+}
